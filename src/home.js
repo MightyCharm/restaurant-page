@@ -1,9 +1,30 @@
 
-export function createHome() {
-    // get main container for content
-    const divContent = document.querySelector(".content");
-    console.log(divContent);
+// global so it can be used in every function needed
+const divContent = document.querySelector(".content");
 
+export function createHome() {
+    clearGrid();
+    createGridHome(); // change grid layout
+    createDescription();
+    createOpen();
+    createEvents();
+}
+
+function clearGrid() {
+    let child = divContent.firstChild;
+    while (child) {
+        divContent.removeChild(child);
+        child = divContent.firstChild;
+    }
+}
+
+function createGridHome() {
+    divContent.style.gridTemplateColumns = "1fr 1fr 1fr";
+    divContent.style.gridTemplateRow = "1fr";
+    divContent.style.gridRowGap = "0rem"; // set back to zero if not needed
+}
+
+function createDescription() {
     // create card description
     const divCardDescription = document.createElement("div");
     divCardDescription.className = "card description";
@@ -23,7 +44,10 @@ export function createHome() {
     divCardDescription.append(para3);
     divCardDescription.append(para4);
 
+    divContent.append(divCardDescription);
+}
 
+function createOpen() {
     // create card open
     const divCardOpen = document.createElement("div");
     divCardOpen.className = "card open"
@@ -52,6 +76,10 @@ export function createHome() {
     divCardOpen.append(paraOpen6);
     divCardOpen.append(paraOpen7);
 
+    divContent.append(divCardOpen);
+}
+
+function createEvents() {
     // create card location
     const divCardLocation = document.createElement("div");
     divCardLocation.className = "card location";
@@ -83,7 +111,5 @@ export function createHome() {
     divCardLocation.append(headerLocation2);
     divCardLocation.append(paraLocation7);
 
-    divContent.append(divCardDescription);
-    divContent.append(divCardOpen);
     divContent.append(divCardLocation);
 }

@@ -9,6 +9,7 @@ const buttonAbout = document.querySelector("#btn-about");
 
 
 buttonHome.addEventListener("click", () => {
+    console.log("hello");
     createHome();
 });
 
@@ -16,5 +17,5 @@ buttonMenu.addEventListener("click", () => {
     createMenu();
 })
 
-//createHome();
-createMenu();
+createHome();
+//createMenu();

@@ -11,16 +11,28 @@ import imageMain4 from "./steak.jpg";
 import imageMain5 from "./chicken.jpg";
 import imageMain6 from "./vegan.jpg";
 
+const divContent = document.querySelector("#content");
+
 export function createMenu() {
+    clearGrid();
     createGridMenu(); // change grid layout
     createDrinkSection();
     createSideSection();
     createMainSection();
 }
 
+function clearGrid() {
+
+    let child = divContent.firstChild;
+    while (child) {
+        divContent.removeChild(child);
+        child = divContent.firstChild;
+    }
+}
+
 function createGridMenu() {
     // grap main container for content
-    const divContent = document.querySelector("#content");
+    //const divContent = document.querySelector("#content");
     // change grid columns in main container to fit layout in Menu Page
     divContent.style.gridTemplateColumns = "1fr";
     divContent.style.justifyItems = "center";
@@ -31,7 +43,7 @@ function createGridMenu() {
 
 function createDrinkSection() {
     // grap main container for content
-    const divContent = document.querySelector("#content");
+    //const divContent = document.querySelector("#content");
 
     // create first section: Drinks
     const divHeaderDrinkSection = document.createElement("div");
@@ -125,7 +137,7 @@ function createDrinkSection() {
 
 function createSideSection() {
     // grap main container for content
-    const divContent = document.querySelector("#content");
+    //const divContent = document.querySelector("#content");
 
     // create header for sides section
     const divHeaderSidesSection = document.createElement("div");
@@ -216,7 +228,7 @@ function createSideSection() {
 }
 
 function createMainSection() {
-    const divContent = document.querySelector("#content");
+    //const divContent = document.querySelector("#content");
 
     // create header for sides section
     const divHeaderMainSection = document.createElement("div");
