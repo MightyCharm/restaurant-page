@@ -14,20 +14,10 @@ import imageMain6 from "./vegan.jpg";
 const divContent = document.querySelector("#content");
 
 export function createMenu() {
-    clearGrid();
     createGridMenu(); // change grid layout
     createDrinkSection();
     createSideSection();
     createMainSection();
-}
-
-function clearGrid() {
-
-    let child = divContent.firstChild;
-    while (child) {
-        divContent.removeChild(child);
-        child = divContent.firstChild;
-    }
 }
 
 function createGridMenu() {

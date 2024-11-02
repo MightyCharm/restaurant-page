@@ -8,19 +8,31 @@ const buttonHome = document.querySelector("#btn-home");
 const buttonMenu = document.querySelector("#btn-menu");
 const buttonAbout = document.querySelector("#btn-about");
 
+function clearGrid() {
+    const divContent = document.querySelector("#content");
+    let child = divContent.firstChild;
+    while(child) {
+        divContent.removeChild(child);
+        child = divContent.firstChild;
+    }
+};
+
 
 buttonHome.addEventListener("click", () => {
+    clearGrid();
     createHome();
 });
 
 buttonMenu.addEventListener("click", () => {
+    clearGrid();
     createMenu();
 });
 
 buttonAbout.addEventListener("click", () => {
+    clearGrid();
     createAbout();
 });
 
-//createHome();
+createHome();
 //createMenu();
-createAbout();
+//createAbout();

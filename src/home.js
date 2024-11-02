@@ -3,19 +3,10 @@
 const divContent = document.querySelector(".content");
 
 export function createHome() {
-    clearGrid();
     createGridHome(); // change grid layout
     createDescription();
     createOpen();
     createEvents();
-}
-
-function clearGrid() {
-    let child = divContent.firstChild;
-    while (child) {
-        divContent.removeChild(child);
-        child = divContent.firstChild;
-    }
 }
 
 function createGridHome() {
