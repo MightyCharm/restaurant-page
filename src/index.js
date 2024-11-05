@@ -15,24 +15,21 @@ function clearGrid() {
         divContent.removeChild(child);
         child = divContent.firstChild;
     }
-};
-
+}
 
 buttonHome.addEventListener("click", () => {
     clearGrid();
     createHome();
-});
+})
 
 buttonMenu.addEventListener("click", () => {
     clearGrid();
     createMenu();
-});
+})
 
 buttonAbout.addEventListener("click", () => {
     clearGrid();
     createAbout();
-});
+})
 
 createHome();
-//createMenu();
-//createAbout();

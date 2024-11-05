@@ -21,8 +21,6 @@ export function createMenu() {
 }
 
 function createGridMenu() {
-    // grap main container for content
-    //const divContent = document.querySelector("#content");
     // change grid columns in main container to fit layout in Menu Page
     divContent.style.gridTemplateColumns = "1fr";
     divContent.style.justifyItems = "center";
@@ -218,8 +216,6 @@ function createSideSection() {
 }
 
 function createMainSection() {
-    //const divContent = document.querySelector("#content");
-
     // create header for sides section
     const divHeaderMainSection = document.createElement("div");
     divHeaderMainSection.className = "header-menu";
@@ -293,7 +289,7 @@ function createMainSection() {
     paraMainPrice3.innerHTML = "$8.99";
     image3.src = imageMain3;
     image3.alt = "image of a plate with schnitzel and fries";
-    paraMainDescription3.innerHTML = "A classic and not without reason. A tender, juicy schnitzel with fries";
+    paraMainDescription3.innerHTML = "A classic and not without reason. A tender, juicy schnitzel with fries.";
     // append elements to card
     divCardMain3.append(headerMain3);
     divCardMain3.append(paraMainPrice3);
@@ -318,7 +314,7 @@ function createMainSection() {
     paraMainPrice4.innerHTML = "$12.99";
     image4.src = imageMain4;
     image4.alt = "image of a plate with steak and vegetables";
-    paraMainDescription4.innerHTML = "From well done to rare, as you like it, with delicious vegetables";
+    paraMainDescription4.innerHTML = "Steak, fresh from the grill with delicious vegetables.";
     // append elements to card
     divCardMain4.append(headerMain4);
     divCardMain4.append(paraMainPrice4);

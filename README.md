@@ -1,14 +1,13 @@
 # restaurant-page
 Project: Restaurant Page (The Odin Project: JavaScript Course)
+This is my first project using webpack a free and open-source module bundler for JavaScript. I build a page for an restaurant with sports theme, using some moderate effects and simple structure to layout the base of this program.
 
-References:
-
+References to Images used in this program:
 Background Image:
 Image by <a href="https://pixabay.com/users/julientromeur-3630051/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4289545">Julien Tromeur</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4289545">Pixabay</a>
 
 Image of Beer:
 Image by <a href="https://pixabay.com/users/ray_shrewsberry-7673058/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8503036">Ray Shrewsberry • Ray_Shrewsberry</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8503036">Pixabay</a>
-
 
 Image of Wine:
 Image by <a href="https://pixabay.com/users/alanajordan-25247407/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8166209">Alana Jordan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8166209">Pixabay</a>
