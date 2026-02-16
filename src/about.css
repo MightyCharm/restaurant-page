@@ -1,0 +1,39 @@
+.contact-us {
+  width: 50%;
+  height: 100%;
+  font-size: 2rem;
+
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  padding: 1.2rem;
+}
+
+.card-contact-us-email {
+}
+
+.card-contact-us-phone {
+}
+
+.contacts {
+  width: 50%;
+  height: 100%;
+
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1.2rem;
+}
+
+.contact-position {
+  justify-self: end;
+  font-weight: bold;
+}
+
+.contact-name {
+  justify-self: start;
+  font-weight: bold;
+}
+
+.contact-email {
+  grid-column: 1 / 3;
+}

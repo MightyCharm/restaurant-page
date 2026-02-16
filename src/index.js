@@ -1,5 +1,9 @@
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./styles.css";
+import "./home.css";
+import "./menu.css";
+import "./about.css";
+
 import { createHome } from "./home.js";
 import { createMenu } from "./menu.js";
 import { createAbout } from "./about.js";

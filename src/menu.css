@@ -1,0 +1,54 @@
+.header-menu {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+
+  width: 45%;
+  height: 70px;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.card-menu {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 0.5rem;
+
+  width: 45%;
+  min-width: 500px;
+  height: 400px;
+  text-align: center;
+}
+
+.card-menu-header {
+  font-size: 1.8rem;
+  border-bottom: 1px solid black;
+}
+
+.card-menu-price {
+  font-size: 2.5rem;
+}
+.card-menu-img {
+  height: auto;
+  width: 60%;
+  min-width: 200px;
+  border-radius: 5px;
+  padding-bottom: 2rem;
+}
+
+.card-menu-description {
+  font-size: 2rem;
+  padding: 1rem;
+}
