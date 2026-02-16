@@ -1,11 +1,12 @@
 {
-    "cSpell.ignoreWords": [
-        "Armwrestling",
-        "Enztal",
-        "Oberes",
-        "Purzelhausen",
-        "Sangiovese",
-        "Sparkeling",
-        "grap"
-    ]
+  "cSpell.ignoreWords": [
+    "Armwrestling",
+    "Enztal",
+    "Oberes",
+    "Purzelhausen",
+    "Sangiovese",
+    "Sparkeling",
+    "grap"
+  ],
+  "conventionalCommits.scopes": ["footer", "ui"]
 }
