@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.css";
 import "./styles.css";
 import { createHome } from "./home.js";
 import { createMenu } from "./menu.js";
@@ -9,27 +10,27 @@ const buttonMenu = document.querySelector("#btn-menu");
 const buttonAbout = document.querySelector("#btn-about");
 
 function clearGrid() {
-    const divContent = document.querySelector("#content");
-    let child = divContent.firstChild;
-    while(child) {
-        divContent.removeChild(child);
-        child = divContent.firstChild;
-    }
+  const divContent = document.querySelector("#content");
+  let child = divContent.firstChild;
+  while (child) {
+    divContent.removeChild(child);
+    child = divContent.firstChild;
+  }
 }
 
 buttonHome.addEventListener("click", () => {
-    clearGrid();
-    createHome();
-})
+  clearGrid();
+  createHome();
+});
 
 buttonMenu.addEventListener("click", () => {
-    clearGrid();
-    createMenu();
-})
+  clearGrid();
+  createMenu();
+});
 
 buttonAbout.addEventListener("click", () => {
-    clearGrid();
-    createAbout();
-})
+  clearGrid();
+  createAbout();
+});
 
 createHome();
