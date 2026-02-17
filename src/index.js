@@ -11,13 +11,13 @@ import { createAbout } from "./about.js";
 const container = document.querySelector("#content");
 const btnHome = document.querySelector("#btn-home");
 const btnMenu = document.querySelector("#btn-menu");
-const butnAbout = document.querySelector("#btn-about");
+const btnAbout = document.querySelector("#btn-about");
 
 function setModule(module, createModule) {
   container.innerHTML = "";
   container.classList.remove("module-home", "module-menu", "module-about");
   container.classList.add(module);
-  createModule();
+  createModule(container);
 }
 
 function setActiveButton(activeButton) {

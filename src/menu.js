@@ -14,19 +14,9 @@ import imageMain6 from "./images/vegan.jpg";
 const divContent = document.querySelector("#content");
 
 export function createMenu() {
-  createGridMenu(); // change grid layout
   createDrinkSection();
   createSideSection();
   createMainSection();
-}
-
-function createGridMenu() {
-  // change grid columns in main container to fit layout in Menu Page
-  divContent.style.gridTemplateColumns = "1fr";
-  divContent.style.justifyItems = "center";
-  divContent.style.gridRowGap = "5rem";
-  divContent.style.justifyItems = "center";
-  divContent.style.alignItems = "center";
 }
 
 function createDrinkSection() {
