@@ -22,7 +22,6 @@ function setModule(module, createModule) {
 
 function setActiveButton(activeButton) {
   const buttons = document.querySelectorAll(".btn");
-  console.log(buttons);
   buttons.forEach((btn) => {
     btn.classList.remove("active");
   });
