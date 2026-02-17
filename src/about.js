@@ -1,15 +1,8 @@
 const divContent = document.querySelector("#content");
 
 export function createAbout() {
-  createGridAbout(); // change grid layout
   createCardContactUs();
   createContacts();
-}
-
-/* overall grid container for whole page section content */
-function createGridAbout() {
-  divContent.style.gridTemplateColumns = "1fr";
-  divContent.style.gridRowGap = "5rem";
 }
 
 function createCardContactUs() {

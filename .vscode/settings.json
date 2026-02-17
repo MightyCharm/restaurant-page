@@ -8,5 +8,5 @@
     "Sparkeling",
     "grap"
   ],
-  "conventionalCommits.scopes": ["footer", "ui", "readme"]
+  "conventionalCommits.scopes": ["footer", "ui", "readme", "css"]
 }

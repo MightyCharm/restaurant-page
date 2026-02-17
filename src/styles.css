@@ -66,7 +66,7 @@ header {
   cursor: pointer;
   transition:
     color 0.3s ease,
-    background-color 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
 .bg-img {
@@ -132,11 +132,15 @@ header {
   color: rgb(182, 182, 182);
 }
 
+.active {
+  box-shadow: 0px 3px 0px hsl(300, 80%, 50%);
+}
+
+/* box-shadow: 0px 5px 0px hsl(300, 80%, 50%);    */
+
 @media (hover: hover) {
   .btn:hover {
     color: hsl(300, 80%, 50%);
-    box-shadow: 0 5px 0px hsl(300, 80%, 50%);
-    /* only applies to the bottom */
   }
 
   .footer-ul a:hover {

@@ -8,33 +8,41 @@ import { createHome } from "./home.js";
 import { createMenu } from "./menu.js";
 import { createAbout } from "./about.js";
 
-// get buttons and add event listener
-const buttonHome = document.querySelector("#btn-home");
-const buttonMenu = document.querySelector("#btn-menu");
-const buttonAbout = document.querySelector("#btn-about");
+const container = document.querySelector("#content");
+const btnHome = document.querySelector("#btn-home");
+const btnMenu = document.querySelector("#btn-menu");
+const butnAbout = document.querySelector("#btn-about");
 
-function clearGrid() {
-  const divContent = document.querySelector("#content");
-  let child = divContent.firstChild;
-  while (child) {
-    divContent.removeChild(child);
-    child = divContent.firstChild;
-  }
+function setModule(module, createModule) {
+  container.innerHTML = "";
+  container.classList.remove("module-home", "module-menu", "module-about");
+  container.classList.add(module);
+  createModule();
 }
 
-buttonHome.addEventListener("click", () => {
-  clearGrid();
-  createHome();
+function setActiveButton(activeButton) {
+  const buttons = document.querySelectorAll(".btn");
+  console.log(buttons);
+  buttons.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+  activeButton.classList.add("active");
+}
+
+btnHome.addEventListener("click", () => {
+  setModule("module-home", createHome);
+  setActiveButton(btnHome);
 });
 
-buttonMenu.addEventListener("click", () => {
-  clearGrid();
-  createMenu();
+btnMenu.addEventListener("click", () => {
+  setModule("module-menu", createMenu);
+  setActiveButton(btnMenu);
 });
 
-buttonAbout.addEventListener("click", () => {
-  clearGrid();
-  createAbout();
+btnAbout.addEventListener("click", () => {
+  setModule("module-about", createAbout);
+  setActiveButton(btnAbout);
 });
 
-createHome();
+setModule("module-home", createHome);
+setActiveButton(btnHome);
