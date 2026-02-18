@@ -45,3 +45,6 @@ btnAbout.addEventListener("click", () => {
 
 setModule("module-home", createHome);
 setActiveButton(btnHome);
+
+// setModule("module-about", createAbout);
+// setActiveButton(btnAbout);

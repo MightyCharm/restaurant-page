@@ -1,7 +1,6 @@
 .module-home {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid rgb(73, 198, 214); */
 }
 
 /* section description */
@@ -14,7 +13,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  background-color: hsla(0, 0%, 5%, 0.9);
+  background-color: hsla(0, 0%, 6%, 0.9);
 }
 
 .description-header {
@@ -76,8 +75,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-
-  background-color: hsla(0, 0%, 5%, 0.9);
+  background-color: hsla(0, 0%, 6%, 0.9);
 }
 
 .opening-header {
@@ -136,7 +134,7 @@
 
   .home-description {
     grid-column: 1 / 2;
-    background-color: hsla(0, 0%, 5%, 0.9);
+    background-color: hsla(0, 0%, 6%, 0.9);
   }
 
   .home-event {

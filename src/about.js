@@ -1,6 +1,7 @@
 function createAbout(container) {
   container.append(createCardContactUs());
   container.append(createContacts());
+  container.append(createForm());
 }
 
 function createCardContactUs() {
@@ -12,7 +13,7 @@ function createCardContactUs() {
   header.classList.add("contact-us-header");
   paraEmail.classList.add("contact-us-email");
   paraPhone.classList.add("contact-us-phone");
-  header.textContent = "Any Questions? Contact us:";
+  header.textContent = "Any Questions?";
   paraEmail.textContent = "Email: sportsBar@webb.com";
   paraPhone.textContent = "Phone: 444-Fake-Number";
 
@@ -29,10 +30,12 @@ function createContacts() {
     "juanaSportsBar@wub.cmp",
   ];
   const section = document.createElement("section");
-  section.classList.add("about-contact-employees");
-
+  const header = document.createElement("h2");
   const ul = document.createElement("ul");
-  ul.classList.add("ul-employee");
+  section.classList.add("about-contact-employees");
+  header.classList.add("contact-employees-header");
+  ul.classList.add("contact-employee-ul");
+  header.textContent = "Contact directly";
   for (let i = 0; i <= 2; i++) {
     const li = document.createElement("li");
     const position = document.createElement("p");
@@ -50,7 +53,41 @@ function createContacts() {
     li.append(position, name, email);
     ul.append(li);
   }
-  section.append(ul);
+  section.append(header, ul);
+  return section;
+}
+
+function createForm() {
+  const section = document.createElement("section");
+  const header = document.createElement("h2");
+  const form = document.createElement("form");
+  const divTextarea = document.createElement("div");
+  const label = document.createElement("label");
+  const textarea = document.createElement("textarea");
+  const btnSubmit = document.createElement("button");
+
+  section.classList.add("about-contact-form");
+  header.classList.add("contact-form-header");
+  divTextarea.classList.add("contact-form-div");
+  form.classList.add("contact-form");
+  label.classList.add("contact-form-label");
+  textarea.classList.add("contact-form-textarea");
+  btnSubmit.classList.add("contact-form-btn-submit");
+  label.htmlFor = "contact-us-textarea";
+  textarea.id = "contact-us-textarea";
+  btnSubmit.id = "btn-submit";
+  header.textContent = "What want to hear your opinion";
+  label.textContent = "Contact Form";
+  btnSubmit.textContent = "Send";
+  textarea.name = "customer-message";
+  textarea.placeholder = "Enter your message here...";
+  textarea.rows = 5;
+  textarea.style.resize = "none";
+
+  divTextarea.append(label, textarea);
+  form.append(divTextarea, btnSubmit);
+  section.append(header, form);
+
   return section;
 }
 
