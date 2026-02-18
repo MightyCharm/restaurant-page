@@ -21,10 +21,14 @@
 }
 
 .contact-us-email {
+  display: flex;
+  gap: 0.5rem;
   font-size: 1.2rem;
 }
 
 .contact-us-phone {
+  display: flex;
+  gap: 0.5rem;
   font-size: 1.2rem;
 }
 

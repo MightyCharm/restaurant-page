@@ -7,12 +7,14 @@ function createHome(container) {
 function createDescription() {
   const sectionDescription = document.createElement("section");
   const header = document.createElement("h2");
+  const headerText = document.createTextNode("Visit Us");
+  const icon = document.createElement("i");
   const ul = document.createElement("ul");
   sectionDescription.className = "home-description";
-  header.classList = "description-header";
+  header.classList.add("description-header");
+  icon.classList.add("fas", "fa-door-open");
   ul.classList.add("description-ul");
-
-  header.textContent = "Visit Us";
+  icon.setAttribute("aria-hidden", "true");
 
   const text = [
     "Fresh and Delicious Food",
@@ -27,6 +29,7 @@ function createDescription() {
     li.classList.add("description-li");
     ul.append(li);
   }
+  header.append(icon, headerText);
   sectionDescription.append(header, ul);
   return sectionDescription;
 }
@@ -34,12 +37,14 @@ function createDescription() {
 function createEvents() {
   const sectionLocation = document.createElement("section");
   const header = document.createElement("h2");
+  const headerText = document.createTextNode("Events");
+  const icon = document.createElement("i");
   const ul = document.createElement("ul");
   sectionLocation.classList.add("home-event");
   header.classList.add("event-header");
+  icon.classList.add("fas", "fa-calendar-alt");
   ul.classList.add("event-ul");
-
-  header.textContent = "Events";
+  icon.setAttribute("aria-hidden", "true");
 
   const text = [
     "Armwrestling: First Week of every Month",
@@ -56,6 +61,8 @@ function createEvents() {
     li.classList.add("event-li");
     ul.append(li);
   }
+
+  header.append(icon, headerText);
   sectionLocation.append(header, ul);
   return sectionLocation;
 }
@@ -63,20 +70,25 @@ function createEvents() {
 function createOpen() {
   const sectionOpen = document.createElement("section");
   const header = document.createElement("h2");
+  const headerText = document.createTextNode("Open");
+  const icon = document.createElement("i");
   const ul = document.createElement("ul");
   const divLocation = document.createElement("div");
-  const headerLocation = document.createElement("h3");
+  const headerLocation = document.createElement("h2");
+  const iconLocation = document.createElement("i");
+  const headerLocationText = document.createTextNode("Location");
   const paraLocation = document.createElement("p");
 
   sectionOpen.classList.add("home-opening");
   header.classList.add("opening-header");
+  icon.classList.add("fas", "fa-clock");
   ul.classList.add("opening-ul");
   divLocation.classList.add("opening-div-location");
   headerLocation.classList.add("opening-header-location");
+  iconLocation.classList.add("fas", "fa-map-marker-alt");
   paraLocation.classList.add("opening-para-location");
+  icon.setAttribute("aria-hidden", "true");
 
-  header.textContent = "Open";
-  headerLocation.textContent = "Location";
   paraLocation.textContent = "Oberes Enztal 10, Purzelhausen 7555";
 
   const text = [
@@ -95,6 +107,8 @@ function createOpen() {
     ul.append(li);
   }
 
+  header.append(icon, headerText);
+  headerLocation.append(iconLocation, headerLocationText);
   divLocation.append(headerLocation, paraLocation);
   sectionOpen.append(header, ul, divLocation);
   return sectionOpen;

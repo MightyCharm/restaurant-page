@@ -8,15 +8,23 @@ function createCardContactUs() {
   const section = document.createElement("section");
   const header = document.createElement("h2");
   const paraEmail = document.createElement("p");
+  const iconEmail = document.createElement("i");
+  const textEmail = document.createTextNode("sportsBar@webb.com");
   const paraPhone = document.createElement("p");
+  const iconPhone = document.createElement("i");
+  const textPhone = document.createTextNode("444-Fake-Number");
   section.classList.add("about-contact-us");
   header.classList.add("contact-us-header");
   paraEmail.classList.add("contact-us-email");
+  iconEmail.classList.add("fas", "fa-envelope");
   paraPhone.classList.add("contact-us-phone");
+  iconPhone.classList.add("fas", "fa-phone");
+  iconEmail.setAttribute("aria-hidden", "true");
+  iconPhone.setAttribute("aria-hidden", "true");
   header.textContent = "Any Questions?";
-  paraEmail.textContent = "Email: sportsBar@webb.com";
-  paraPhone.textContent = "Phone: 444-Fake-Number";
 
+  paraEmail.append(iconEmail, textEmail);
+  paraPhone.append(iconPhone, textPhone);
   section.append(header, paraEmail, paraPhone);
   return section;
 }
@@ -76,7 +84,7 @@ function createForm() {
   label.htmlFor = "contact-us-textarea";
   textarea.id = "contact-us-textarea";
   btnSubmit.id = "btn-submit";
-  header.textContent = "What want to hear your opinion";
+  header.textContent = "We want to hear your opinion";
   label.textContent = "Contact Form";
   btnSubmit.textContent = "Send";
   textarea.name = "customer-message";
