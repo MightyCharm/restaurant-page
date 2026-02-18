@@ -27,8 +27,7 @@ function createDescription() {
     li.classList.add("description-li");
     ul.append(li);
   }
-  sectionDescription.appendChild(header);
-  sectionDescription.appendChild(ul);
+  sectionDescription.append(header, ul);
   return sectionDescription;
 }
 
@@ -36,8 +35,7 @@ function createEvents() {
   const sectionLocation = document.createElement("section");
   const header = document.createElement("h2");
   const ul = document.createElement("ul");
-
-  sectionLocation.className = "home-event";
+  sectionLocation.classList.add("home-event");
   header.classList.add("event-header");
   ul.classList.add("event-ul");
 
@@ -58,8 +56,7 @@ function createEvents() {
     li.classList.add("event-li");
     ul.append(li);
   }
-  sectionLocation.appendChild(header);
-  sectionLocation.appendChild(ul);
+  sectionLocation.append(header, ul);
   return sectionLocation;
 }
 
@@ -98,12 +95,8 @@ function createOpen() {
     ul.append(li);
   }
 
-  divLocation.appendChild(headerLocation);
-  divLocation.appendChild(paraLocation);
-
-  sectionOpen.appendChild(header);
-  sectionOpen.appendChild(ul);
-  sectionOpen.appendChild(divLocation);
+  divLocation.append(headerLocation, paraLocation);
+  sectionOpen.append(header, ul, divLocation);
   return sectionOpen;
 }
 

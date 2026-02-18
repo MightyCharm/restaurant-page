@@ -1,60 +1,57 @@
-const divContent = document.querySelector("#content");
-
-export function createAbout() {
-  createCardContactUs();
-  createContacts();
+function createAbout(container) {
+  container.append(createCardContactUs());
+  container.append(createContacts());
 }
 
 function createCardContactUs() {
-  const divCardContact = document.createElement("div");
-  divCardContact.className = "contact-us";
+  const section = document.createElement("section");
   const header = document.createElement("h2");
   const paraEmail = document.createElement("p");
   const paraPhone = document.createElement("p");
-  header.className = "card-contact-us-header";
-  paraEmail.className = "card-contact-us-email";
-  paraPhone.className = "card-contact-us-phone";
+  section.classList.add("about-contact-us");
+  header.classList.add("contact-us-header");
+  paraEmail.classList.add("contact-us-email");
+  paraPhone.classList.add("contact-us-phone");
+  header.textContent = "Any Questions? Contact us:";
+  paraEmail.textContent = "Email: sportsBar@webb.com";
+  paraPhone.textContent = "Phone: 444-Fake-Number";
 
-  header.innerHTML = "Any Questions? Contact us:";
-
-  paraEmail.innerHTML = "Email: sportsBar@webb.com";
-  paraPhone.innerHTML = "Phone: 444-Fake-Number";
-
-  divCardContact.append(header);
-  divCardContact.append(paraEmail);
-  divCardContact.append(paraPhone);
-
-  divContent.append(divCardContact);
+  section.append(header, paraEmail, paraPhone);
+  return section;
 }
 
 function createContacts() {
-  const contactsPosition = ["Manager:", "Cook:", "Waitress:"];
+  const contactsPosition = ["Manager", "Cook", "Waitress"];
   const contactsName = ["Steven M.", "Jimmy K.", "Juana T."];
   const contactsEmail = [
     "stevenSportsBar@wub.cmp",
     "jimmySportsBar@wub.cmp",
     "juanaSportsBar@wub.cmp",
   ];
+  const section = document.createElement("section");
+  section.classList.add("about-contact-employees");
 
+  const ul = document.createElement("ul");
+  ul.classList.add("ul-employee");
   for (let i = 0; i <= 2; i++) {
-    const divCardContact = document.createElement("div");
-    divCardContact.className = "contacts";
-
+    const li = document.createElement("li");
     const position = document.createElement("p");
     const name = document.createElement("p");
     const email = document.createElement("p");
-    position.classList = "contact-position";
-    name.className = "contact-name";
-    email.className = "contact-email";
+    li.classList.add("li-employee");
+    position.classList.add("contact-position");
+    name.classList.add("contact-name");
+    email.classList.add("contact-email");
 
-    position.innerHTML = contactsPosition[i];
-    name.innerHTML = contactsName[i];
-    email.innerHTML = contactsEmail[i];
+    position.textContent = contactsPosition[i];
+    name.textContent = contactsName[i];
+    email.textContent = contactsEmail[i];
 
-    divCardContact.append(position);
-    divCardContact.append(name);
-    divCardContact.append(email);
-
-    divContent.append(divCardContact);
+    li.append(position, name, email);
+    ul.append(li);
   }
+  section.append(ul);
+  return section;
 }
+
+export { createAbout };

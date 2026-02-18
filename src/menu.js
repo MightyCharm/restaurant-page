@@ -42,11 +42,8 @@ function createDrinkSection() {
   paraDrinkDescription.textContent =
     "From our own well especially for you. There is nothing more refreshing for the heart and senses.";
   paraDrinkPrice.textContent = "$1.99";
-  divTextDrink.appendChild(headerDrink);
-  divTextDrink.appendChild(paraDrinkDescription);
-  divTextDrink.appendChild(paraDrinkPrice);
-  divCardDrink.appendChild(image);
-  divCardDrink.appendChild(divTextDrink);
+  divTextDrink.append(headerDrink, paraDrinkDescription, paraDrinkPrice);
+  divCardDrink.append(image, divTextDrink);
 
   const divCardDrink2 = document.createElement("div");
   const divTextDrink2 = document.createElement("div");
@@ -66,12 +63,8 @@ function createDrinkSection() {
   paraDrinkDescription2.textContent =
     "Wheat beer flown in directly from Munich. Taste tradition combined with modernity. Refreshing and tasty.";
   paraDrinkPrice2.textContent = "$3.99";
-  divTextDrink2.appendChild(headerDrink2);
-  divTextDrink2.appendChild(paraDrinkDescription2);
-  divTextDrink2.appendChild(paraDrinkPrice2);
-
-  divCardDrink2.appendChild(image2);
-  divCardDrink2.appendChild(divTextDrink2);
+  divTextDrink2.append(headerDrink2, paraDrinkDescription2, paraDrinkPrice2);
+  divCardDrink2.append(image2, divTextDrink2);
 
   const divCardDrink3 = document.createElement("div");
   const divTextDrink3 = document.createElement("div");
@@ -91,17 +84,15 @@ function createDrinkSection() {
   paraDrinkDescription3.textContent =
     "Our italian special. A classic red wine from Tuscany made from Sangiovese grapes. Give it a try, you won't regret it.";
   paraDrinkPrice3.textContent = "$2.99";
-  divTextDrink3.appendChild(headerDrink3);
-  divTextDrink3.appendChild(paraDrinkDescription3);
-  divTextDrink3.appendChild(paraDrinkPrice3);
-  divCardDrink3.appendChild(image3);
-  divCardDrink3.appendChild(divTextDrink3);
+  divTextDrink3.append(headerDrink3, paraDrinkDescription3, paraDrinkPrice3);
+  divCardDrink3.append(image3, divTextDrink3);
 
-  section.appendChild(divHeaderDrinkSection);
-  section.appendChild(divCardDrink);
-  section.appendChild(divCardDrink2);
-  section.appendChild(divCardDrink3);
-
+  section.append(
+    divHeaderDrinkSection,
+    divCardDrink,
+    divCardDrink2,
+    divCardDrink3,
+  );
   return section;
 }
 
@@ -130,13 +121,8 @@ function createSideSection() {
   paraSideDescription.textContent =
     "Vegetables fresh from the farmer around the corner. Healthy and delicious.";
   paraSidePrice.textContent = "$4.99";
-
-  divTextSide.appendChild(headerSide);
-  divTextSide.appendChild(paraSideDescription);
-  divTextSide.appendChild(paraSidePrice);
-
-  divCardSide.appendChild(image);
-  divCardSide.appendChild(divTextSide);
+  divTextSide.append(headerSide, paraSideDescription, paraSidePrice);
+  divCardSide.append(image, divTextSide);
 
   const divCardSide2 = document.createElement("div");
   const divTextSide2 = document.createElement("div");
@@ -156,12 +142,8 @@ function createSideSection() {
   paraSideDescription2.textContent =
     "Pumpkin soup made according to an old family recipe. Ginger optional.";
   paraSidePrice2.textContent = "$3.99";
-  divTextSide2.appendChild(headerSide2);
-  divTextSide2.appendChild(paraSideDescription2);
-  divTextSide2.appendChild(paraSidePrice2);
-
-  divCardSide2.appendChild(image2);
-  divCardSide2.appendChild(divTextSide2);
+  divTextSide2.append(headerSide2, paraSideDescription2, paraSidePrice2);
+  divCardSide2.append(image2, divTextSide2);
 
   const divCardSide3 = document.createElement("div");
   const divTextSide3 = document.createElement("div");
@@ -181,18 +163,15 @@ function createSideSection() {
   paraSideDescription3.textContent =
     "Freshly prepared waffles with cream and chocolate sauce. Simply delicious.";
   paraSidePrice3.textContent = "$5.99";
+  divTextSide3.append(headerSide3, paraSideDescription3, paraSidePrice3);
+  divCardSide3.append(image3, divTextSide3);
 
-  divTextSide3.appendChild(headerSide3);
-  divTextSide3.appendChild(paraSideDescription3);
-  divTextSide3.appendChild(paraSidePrice3);
-  divCardSide3.appendChild(image3);
-  divCardSide3.appendChild(divTextSide3);
-
-  section.appendChild(divHeaderSidesSection);
-  section.appendChild(divCardSide);
-  section.appendChild(divCardSide2);
-  section.appendChild(divCardSide3);
-
+  section.append(
+    divHeaderSidesSection,
+    divCardSide,
+    divCardSide2,
+    divCardSide3,
+  );
   return section;
 }
 
@@ -221,11 +200,8 @@ function createMainSection() {
   paraMainDescription.textContent =
     "Delicious spaghetti in homemade Bolognese. Fresh herbs make the difference here.";
   paraMainPrice.textContent = "$7.99";
-  divTextMain.appendChild(headerMain);
-  divTextMain.appendChild(paraMainDescription);
-  divTextMain.appendChild(paraMainPrice);
-  divCardMain.appendChild(image);
-  divCardMain.appendChild(divTextMain);
+  divTextMain.append(headerMain, paraMainDescription, paraMainPrice);
+  divCardMain.append(image, divTextMain);
 
   const divCardMain2 = document.createElement("div");
   const divTextMain2 = document.createElement("div");
@@ -245,11 +221,8 @@ function createMainSection() {
   paraMainDescription2.textContent =
     "Healthy and delicious. Freshly caught and delivered straight to the table. Delicious vegetables to go with it.";
   paraMainPrice2.textContent = "$10.99";
-  divTextMain2.appendChild(headerMain2);
-  divTextMain2.appendChild(paraMainDescription2);
-  divTextMain2.appendChild(paraMainPrice2);
-  divCardMain2.appendChild(image2);
-  divCardMain2.appendChild(divTextMain2);
+  divTextMain2.append(headerMain2, paraMainDescription2, paraMainPrice2);
+  divCardMain2.append(image2, divTextMain2);
 
   const divCardMain3 = document.createElement("div");
   const divTextMain3 = document.createElement("div");
@@ -269,11 +242,8 @@ function createMainSection() {
   paraMainDescription3.textContent =
     "A classic and not without reason. A tender, juicy schnitzel with fries.";
   paraMainPrice3.textContent = "$8.99";
-  divTextMain3.appendChild(headerMain3);
-  divTextMain3.appendChild(paraMainDescription3);
-  divTextMain3.appendChild(paraMainPrice3);
-  divCardMain3.appendChild(image3);
-  divCardMain3.appendChild(divTextMain3);
+  divTextMain3.append(headerMain3, paraMainDescription3, paraMainPrice3);
+  divCardMain3.append(image3, divTextMain3);
 
   const divCardMain4 = document.createElement("div");
   const divTextMain4 = document.createElement("div");
@@ -293,11 +263,8 @@ function createMainSection() {
   paraMainDescription4.textContent =
     "Steak, fresh from the grill with delicious vegetables.";
   paraMainPrice4.textContent = "$12.99";
-  divTextMain4.appendChild(headerMain4);
-  divTextMain4.appendChild(paraMainDescription4);
-  divTextMain4.appendChild(paraMainPrice4);
-  divCardMain4.appendChild(image4);
-  divCardMain4.appendChild(divTextMain4);
+  divTextMain4.append(headerMain4, paraMainDescription4, paraMainPrice4);
+  divCardMain4.append(image4, divTextMain4);
 
   const divCardMain5 = document.createElement("div");
   const divTextMain5 = document.createElement("div");
@@ -317,13 +284,8 @@ function createMainSection() {
   paraMainDescription5.textContent =
     "Chicken Wings with Hot Sauce. You will love it.";
   paraMainPrice5.textContent = "$9.99";
-
-  divTextMain5.appendChild(headerMain5);
-  divTextMain5.appendChild(paraMainDescription5);
-  divTextMain5.appendChild(paraMainPrice5);
-
-  divCardMain5.appendChild(image5);
-  divCardMain5.appendChild(divTextMain5);
+  divTextMain5.append(headerMain5, paraMainDescription5, paraMainPrice5);
+  divCardMain5.append(image5, divTextMain5);
 
   const divCardMain6 = document.createElement("div");
   const divTextMain6 = document.createElement("div");
@@ -343,21 +305,18 @@ function createMainSection() {
   paraMainDescription6.textContent =
     "Filled with feta cheese, tofu and fresh vegetables. Vegan doesn't have to be boring.";
   paraMainPrice6.textContent = "$11.99";
+  divTextMain6.append(headerMain6, paraMainDescription6, paraMainPrice6);
+  divCardMain6.append(image6, divTextMain6);
 
-  divTextMain6.appendChild(headerMain6);
-  divTextMain6.appendChild(paraMainDescription6);
-  divTextMain6.appendChild(paraMainPrice6);
-
-  divCardMain6.appendChild(image6);
-  divCardMain6.appendChild(divTextMain6);
-
-  section.appendChild(divHeaderMainSection);
-  section.appendChild(divCardMain);
-  section.appendChild(divCardMain2);
-  section.appendChild(divCardMain3);
-  section.appendChild(divCardMain4);
-  section.appendChild(divCardMain5);
-  section.appendChild(divCardMain6);
+  section.append(
+    divHeaderMainSection,
+    divCardMain,
+    divCardMain2,
+    divCardMain3,
+    divCardMain4,
+    divCardMain5,
+    divCardMain6,
+  );
 
   return section;
 }
