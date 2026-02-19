@@ -1,13 +1,13 @@
-function createHome(container) {
-  container.appendChild(createDescription());
-  container.appendChild(createEvents());
-  container.appendChild(createOpen());
+function createHome(container, data) {
+  container.appendChild(createDescription(data.description));
+  container.appendChild(createEvents(data.events));
+  container.appendChild(createOpen(data.open));
 }
 
-function createDescription() {
+function createDescription(data) {
   const sectionDescription = document.createElement("section");
   const header = document.createElement("h2");
-  const headerText = document.createTextNode("Visit Us");
+  const headerText = document.createTextNode(data.header);
   const icon = document.createElement("i");
   const ul = document.createElement("ul");
   sectionDescription.className = "home-description";
@@ -16,16 +16,9 @@ function createDescription() {
   ul.classList.add("description-ul");
   icon.setAttribute("aria-hidden", "true");
 
-  const text = [
-    "Fresh and Delicious Food",
-    "Ice Cold and Hot Drinks",
-    "Trendy Launch Area",
-    "For Young and Old",
-    "Child friendly",
-  ];
-  for (let i = 0; i < text.length; i++) {
+  for (let i = 0; i < data.text.length; i++) {
     const li = document.createElement("li");
-    li.textContent = text[i];
+    li.textContent = data.text[i];
     li.classList.add("description-li");
     ul.append(li);
   }
@@ -34,10 +27,10 @@ function createDescription() {
   return sectionDescription;
 }
 
-function createEvents() {
+function createEvents(data) {
   const sectionLocation = document.createElement("section");
   const header = document.createElement("h2");
-  const headerText = document.createTextNode("Events");
+  const headerText = document.createTextNode(data.header);
   const icon = document.createElement("i");
   const ul = document.createElement("ul");
   sectionLocation.classList.add("home-event");
@@ -46,18 +39,9 @@ function createEvents() {
   ul.classList.add("event-ul");
   icon.setAttribute("aria-hidden", "true");
 
-  const text = [
-    "Armwrestling: First Week of every Month",
-    "Darts Night: Second Week of every Month",
-    "Table Hockey: Third Week of every Month",
-    "Table Tennis: Forth Week of every Month",
-    "All Events starting at 20pm",
-    "Win Free Meals and Special Prices",
-  ];
-
-  for (let i = 0; i < text.length; i++) {
+  for (let i = 0; i < data.text.length; i++) {
     const li = document.createElement("li");
-    li.textContent = text[i];
+    li.textContent = data.text[i];
     li.classList.add("event-li");
     ul.append(li);
   }
@@ -67,16 +51,16 @@ function createEvents() {
   return sectionLocation;
 }
 
-function createOpen() {
+function createOpen(data) {
   const sectionOpen = document.createElement("section");
   const header = document.createElement("h2");
-  const headerText = document.createTextNode("Open");
+  const headerText = document.createTextNode(data.header);
   const icon = document.createElement("i");
   const ul = document.createElement("ul");
   const divLocation = document.createElement("div");
   const headerLocation = document.createElement("h2");
   const iconLocation = document.createElement("i");
-  const headerLocationText = document.createTextNode("Location");
+  const headerLocationText = document.createTextNode(data.location.header);
   const paraLocation = document.createElement("p");
 
   sectionOpen.classList.add("home-opening");
@@ -89,20 +73,11 @@ function createOpen() {
   paraLocation.classList.add("opening-para-location");
   icon.setAttribute("aria-hidden", "true");
 
-  paraLocation.textContent = "Oberes Enztal 10, Purzelhausen 7555";
+  paraLocation.textContent = data.location.text;
 
-  const text = [
-    "Monday: 9am to 10pm",
-    "Tuesday: 9am to 10pm",
-    "Wednesday: 9am to 10pm",
-    "Thursday: 9am to 10pm",
-    "Friday: 9am to 11pm",
-    "Saturday: 9am to 11pm",
-    "Sunday: Closed",
-  ];
-  for (let i = 0; i < text.length; i++) {
+  for (let i = 0; i < data.text.length; i++) {
     const li = document.createElement("li");
-    li.textContent = text[i];
+    li.textContent = data.text[i];
     li.classList.add("opening-li");
     ul.append(li);
   }

@@ -1,18 +1,20 @@
-function createAbout(container) {
-  container.append(createCardContactUs());
-  container.append(createContacts());
-  container.append(createForm());
+function createAbout(container, data) {
+  console.log("createAbout");
+  console.log(data);
+  container.append(createCardContactUs(data.contactUs));
+  container.append(createContacts(data.contactDirectly));
+  container.append(createForm(data.contactForm));
 }
 
-function createCardContactUs() {
+function createCardContactUs(data) {
   const section = document.createElement("section");
   const header = document.createElement("h2");
   const paraEmail = document.createElement("p");
   const iconEmail = document.createElement("i");
-  const textEmail = document.createTextNode("sportsBar@webb.com");
+  const textEmail = document.createTextNode(data.text[0]);
   const paraPhone = document.createElement("p");
   const iconPhone = document.createElement("i");
-  const textPhone = document.createTextNode("444-Fake-Number");
+  const textPhone = document.createTextNode(data.text[1]);
   section.classList.add("about-contact-us");
   header.classList.add("contact-us-header");
   paraEmail.classList.add("contact-us-email");
@@ -21,7 +23,7 @@ function createCardContactUs() {
   iconPhone.classList.add("fas", "fa-phone");
   iconEmail.setAttribute("aria-hidden", "true");
   iconPhone.setAttribute("aria-hidden", "true");
-  header.textContent = "Any Questions?";
+  header.textContent = data.header;
 
   paraEmail.append(iconEmail, textEmail);
   paraPhone.append(iconPhone, textPhone);
@@ -29,7 +31,7 @@ function createCardContactUs() {
   return section;
 }
 
-function createContacts() {
+function createContacts(data) {
   const contactsPosition = ["Manager", "Cook", "Waitress"];
   const contactsName = ["Steven M.", "Jimmy K.", "Juana T."];
   const contactsEmail = [
@@ -43,7 +45,7 @@ function createContacts() {
   section.classList.add("about-contact-employees");
   header.classList.add("contact-employees-header");
   ul.classList.add("contact-employee-ul");
-  header.textContent = "Contact directly";
+  header.textContent = data.header;
   for (let i = 0; i <= 2; i++) {
     const li = document.createElement("li");
     const position = document.createElement("p");
@@ -54,9 +56,9 @@ function createContacts() {
     name.classList.add("contact-name");
     email.classList.add("contact-email");
 
-    position.textContent = contactsPosition[i];
-    name.textContent = contactsName[i];
-    email.textContent = contactsEmail[i];
+    position.textContent = data.text[i].position;
+    name.textContent = data.text[i].name;
+    email.textContent = data.text[i].email;
 
     li.append(position, name, email);
     ul.append(li);
@@ -65,7 +67,7 @@ function createContacts() {
   return section;
 }
 
-function createForm() {
+function createForm(data) {
   const section = document.createElement("section");
   const header = document.createElement("h2");
   const form = document.createElement("form");
@@ -84,9 +86,9 @@ function createForm() {
   label.htmlFor = "contact-us-textarea";
   textarea.id = "contact-us-textarea";
   btnSubmit.id = "btn-submit";
-  header.textContent = "We want to hear your opinion";
-  label.textContent = "Contact Form";
-  btnSubmit.textContent = "Send";
+  header.textContent = data.header;
+  label.textContent = data.text[0];
+  btnSubmit.textContent = data.text[1];
   textarea.name = "customer-message";
   textarea.placeholder = "Enter your message here...";
   textarea.rows = 5;
