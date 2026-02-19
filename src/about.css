@@ -82,7 +82,6 @@
   padding: 2rem;
   height: 100%;
   background-color: hsla(0, 0%, 6%, 0.9);
-  /* border: 5px solid red; */
 }
 
 .contact-form {
@@ -95,23 +94,19 @@
 
 .contact-form-header {
   font-size: 1.2rem;
-  /* border: 1px solid blue; */
 }
 
 .contact-form-div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* border: 1px solid pink; */
 }
 
 .contact-form-textarea {
   padding: 0.5rem;
-  /* border: 5px solid red; */
 }
 
 .contact-form-label {
-  /* border: 1px solid red; */
 }
 
 .contact-form-btn-submit {
@@ -122,13 +117,13 @@
 
 /* add media queries - make it look better - commit! */
 @media (min-width: 768px) {
-  body {
-    border: 1px solid red;
-  }
-
   .module-about {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .about-contact-us {
+    background-color: hsla(0, 0%, 10%, 0.9);
   }
 
   .about-contact-form {
@@ -137,9 +132,6 @@
 }
 
 @media (min-width: 1200px) {
-  body {
-    border: 1px solid white;
-  }
   .module-about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

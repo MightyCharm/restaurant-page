@@ -32,13 +32,6 @@ function createCardContactUs(data) {
 }
 
 function createContacts(data) {
-  const contactsPosition = ["Manager", "Cook", "Waitress"];
-  const contactsName = ["Steven M.", "Jimmy K.", "Juana T."];
-  const contactsEmail = [
-    "stevenSportsBar@wub.cmp",
-    "jimmySportsBar@wub.cmp",
-    "juanaSportsBar@wub.cmp",
-  ];
   const section = document.createElement("section");
   const header = document.createElement("h2");
   const ul = document.createElement("ul");

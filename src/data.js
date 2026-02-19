@@ -46,10 +46,10 @@ const data = {
         "Saturday: 9am to 11pm",
         "Sunday: Closed",
       ],
-      location: {
-        header: "Location",
-        text: "Oberes Enztal 10, Purzelhausen 7555",
-      },
+    },
+    location: {
+      header: "Location",
+      text: ["Oberes Enztal 10", "Purzelhausen 7555"],
     },
   },
   menu: {

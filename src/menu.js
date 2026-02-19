@@ -35,7 +35,6 @@ function createSection(data) {
     divCard.append(img, divText);
     section.append(divCard);
   });
-
   return section;
 }
 
